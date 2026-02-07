@@ -45,7 +45,7 @@ export const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden scroll-mt-28"
     >
       {/* Hero Background */}
       <div className="absolute inset-0 z-0">
@@ -124,7 +124,7 @@ export const HeroSection = () => {
                   </div>
                 </div>
                 <motion.a
-                  href="#contact"
+                  href="#register"
                   initial={{ opacity: 0, y: 12 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.6, duration: 0.5 }}

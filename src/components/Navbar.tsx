@@ -1,14 +1,15 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, UserPlus, X } from "lucide-react";
 import elysionLogo from "@/assets/elysion-logo.png";
 
 const navLinks = [
   { name: "Home", href: "#home" },
   { name: "About", href: "#about" },
   { name: "Activities", href: "#activities" },
-  { name: "Speakers", href: "#speakers" },
   { name: "Workshops", href: "#workshops" },
+  { name: "Register", href: "#register" },
+  { name: "Speakers", href: "#speakers" },
   { name: "Gallery", href: "#gallery" },
   { name: "Contact", href: "#contact" },
 ];
@@ -74,9 +75,10 @@ export const Navbar = () => {
 
             {/* Register Button - Desktop */}
             <a
-              href="#contact"
-              className="hidden lg:block px-5 py-2.5 bg-gradient-gold text-primary font-display font-semibold text-xs tracking-[0.2em] uppercase rounded-sm shadow-[0_2px_16px_rgba(203,162,75,0.3)] hover:shadow-[0_4px_24px_rgba(203,162,75,0.4)] transition-all duration-300 hover:scale-[1.02]"
+              href="#register"
+              className="hidden lg:inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-gold text-primary font-display font-semibold text-xs tracking-[0.2em] uppercase rounded-sm shadow-[0_2px_16px_rgba(203,162,75,0.3)] hover:shadow-[0_4px_24px_rgba(203,162,75,0.4)] transition-all duration-300 hover:scale-[1.02]"
             >
+              <UserPlus className="w-4 h-4" />
               Register Now
             </a>
 
@@ -126,7 +128,7 @@ export const Navbar = () => {
                     className="pt-4"
                   >
                     <a
-                      href="#contact"
+                      href="#register"
                       onClick={() => setIsMobileMenuOpen(false)}
                       className="block w-full text-center min-h-[52px] flex items-center justify-center px-6 py-4 bg-gradient-gold text-primary font-display font-semibold text-sm tracking-wider rounded-sm shadow-[0_2px_16px_rgba(203,162,75,0.3)] touch-manipulation active:scale-[0.98] transition-transform"
                     >

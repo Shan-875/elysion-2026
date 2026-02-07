@@ -3,7 +3,7 @@ import { MapPin, Navigation } from "lucide-react";
 
 export const LocationSection = () => {
   return (
-    <section className="py-24 bg-gradient-hero relative overflow-hidden">
+    <section className="py-24 bg-gradient-hero relative overflow-hidden scroll-mt-28">
       {/* Decorative Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-secondary/30 to-transparent" />

@@ -1,42 +1,48 @@
 import { motion } from "framer-motion";
-import { Camera, Glasses, Check } from "lucide-react";
+import { Check, Cpu, Gamepad2, Sparkles } from "lucide-react";
 import { programImages } from "@/lib/programImages";
 
 const workshops = [
   {
-    icon: Camera,
-    image: programImages.workshops.photography,
-    title: "Photography Workshop",
+    icon: Cpu,
+    image: programImages.gallery[2],
+    title: "Embedded Systems Workshop",
     description:
-      "The Photography Workshop at ELYSION 5.0 offers a chance to enhance your photography skills, from mastering composition and lighting to creative storytelling and editing techniques.",
-    leader: "Sebinster Francis",
-    leaderTitle: "Photographer, Content Creator, and Social Media Influencer",
-    highlights: [
-      "Influencer at Sony",
-      "Featured on BBC Earth and Nat Geo India",
-      "Recipient of the Kerala State Film Award in 2021",
-    ],
-    cta: "Don't miss this opportunity to capture stunning images like a pro!",
+      "Introduction to microcontrollers and real-time systems. Get hands-on with ESP32 to build and control a smart car through your phone.",
+    leader: "Adithyan Anil",
+    leaderTitle: "Co-Founder, Tech Manteraz",
+    cta: "Explore IoT and smart technology in action!",
   },
   {
-    icon: Glasses,
-    image: programImages.workshops.arVr,
-    title: "AR/VR Workshop",
+    icon: Gamepad2,
+    image: programImages.gallery[0],
+    title: "Game Development Workshop",
     description:
-      "The AR/VR Workshop at ELYSION 5.0 offers an exciting opportunity to explore immersive technologies transforming industries like gaming, healthcare, and education.",
-    additionalInfo:
-      "Participants will gain hands-on experience in designing AR/VR applications, creating interactive augmented content, and building virtual environments using industry-relevant tools and frameworks.",
+      "Create your own 3D games using Unity. Learn models, objects, and scripting while designing and building interactive environments.",
     leaders: [
-      { name: "Mathews Kuriakose", title: "Software Developer" },
-      { name: "Mrudul Shaji", title: "Software Developer" },
-      { name: "Vishnu Prathap", title: "Implementation Engineer, 6D Technologies" },
+      { name: "Lijin Joseph", title: "Game Developer" },
+      { name: "Sabarisuthan S", title: "Game Developer" },
+      { name: "Abhishek Suresh M K", title: "Developer" },
     ],
+    cta: "Step into the world of game design and start building your own 3D game!",
+  },
+  {
+    icon: Sparkles,
+    image: programImages.gallery[1],
+    title: "Fashion Choreography Workshop",
+    description:
+      "Step into fashion and modeling. Learn essential modeling qualities, types of modeling, and how to build a career in the industry.",
+    leader: "Shameer Bin Kareem Routher",
+    leaderTitle: "Fashion Choreographer & Costume Designer",
+    additionalInfo:
+      "Get insights into theme-based costumes, designer creativity, and stage presence.",
+    cta: "Unleash your confidence, creativity, and runway potential!",
   },
 ];
 
 export const WorkshopsSection = () => {
   return (
-    <section id="workshops" className="py-24 bg-gradient-hero relative overflow-hidden">
+    <section id="workshops" className="py-24 bg-gradient-hero relative overflow-hidden scroll-mt-28">
       {/* Decorative Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-secondary/30 to-transparent" />

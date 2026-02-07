@@ -23,6 +23,7 @@ import ieee from "@/assets/ieee.png";
 import ies from "@/assets/ies.png";
 import isb from "@/assets/isb.png";
 import yuva from "@/assets/yuva.png";
+import { RegistrationSection } from "@/components/RegistrationSection";
 
 const imagesToPreload = [
   elysionLogo,
@@ -37,7 +38,7 @@ const imagesToPreload = [
   "/favicon.png",
 ];
 
-const MIN_LOADING_TIME = 2800; // Show ELYSION + Coming Soon for ~2s before curtains open
+const MIN_LOADING_TIME = 600; // Show ELYSION + Coming Soon briefly before curtains open (shorter on mobile)
 
 const Index = () => {
   const imagesLoaded = useImagePreloader(imagesToPreload);
@@ -78,6 +79,7 @@ const Index = () => {
         <ActivitiesSection />
         <SpeakersSection />
         <WorkshopsSection />
+        <RegistrationSection />
         <GallerySection />
         <LocationSection />
         <ContactSection />

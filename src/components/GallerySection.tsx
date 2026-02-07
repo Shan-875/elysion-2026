@@ -17,7 +17,7 @@ export const GallerySection = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
   return (
-    <section id="gallery" className="py-28 bg-theme-gallery relative overflow-hidden">
+    <section id="gallery" className="py-28 bg-theme-gallery relative overflow-hidden scroll-mt-28">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24 bg-gradient-to-b from-transparent via-[#CBA24B]/40 to-transparent z-10" />
 
       <div className="container mx-auto px-6 max-w-6xl relative z-10">

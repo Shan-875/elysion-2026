@@ -3,30 +3,30 @@ import { Phone, Mail } from "lucide-react";
 
 const contacts = [
   {
-    name: "Adarsh K B",
-    role: "Organizing Chair, Elysion 5",
-    phone: "9496185897",
-  },
-  {
-    name: "Ardra Shaji",
-    role: "Chair, IEEE SB CE Munnar",
-    phone: "7306921927",
-  },
-  {
     name: "Dan V Prabha",
-    role: "Publicity Outreach Coordinator",
+    role: "Chair, IEEE SB CE Munnar",
     phone: "8078126241",
   },
   {
-    name: "Abhishek Suresh M K",
-    role: "Registration and Volunteer Coordinator",
-    phone: "9496452970",
+    name: "Mohammed Shammas",
+    role: "Organizing Chair",
+    phone: "8848466998",
+  },
+  {
+    name: "Lakshmi R",
+    role: "Secretary",
+    phone: "6238264735",
+  },
+  {
+    name: "Siva T P",
+    role: "Event Coordinator",
+    phone: "8098845706",
   },
 ];
 
 export const ContactSection = () => {
   return (
-    <section id="contact" className="py-24 bg-background relative overflow-hidden">
+    <section id="contact" className="py-24 bg-background relative overflow-hidden scroll-mt-28">
       {/* Decorative line */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24 bg-gradient-to-b from-secondary/0 via-secondary to-secondary/0" />
 
@@ -65,13 +65,15 @@ export const ContactSection = () => {
               <p className="font-body text-base text-muted-foreground mb-4 leading-tight">
                 {contact.role}
               </p>
-              <a
-                href={`tel:+91${contact.phone}`}
-                className="inline-flex items-center gap-2 font-sans text-secondary hover:text-accent transition-colors"
-              >
-                <Phone className="w-4 h-4" />
-                {contact.phone}
-              </a>
+              {contact.phone ? (
+                <a
+                  href={`tel:+91${contact.phone}`}
+                  className="inline-flex items-center gap-2 font-sans text-secondary hover:text-accent transition-colors"
+                >
+                  <Phone className="w-4 h-4" />
+                  {contact.phone}
+                </a>
+              ) : null}
             </motion.div>
           ))}
         </div>

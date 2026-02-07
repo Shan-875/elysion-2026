@@ -3,8 +3,8 @@ import { useState, useEffect, useRef } from "react";
 import comingSoonImg from "@/assets/coming-soon.png";
 import heroImage from "@/assets/hero-im.png";
 
-const CURTAIN_DURATION = 1.15;
-const CURTAIN_DELAY = 0.15;
+const CURTAIN_DURATION = 0.55;
+const CURTAIN_DELAY = 0.08;
 
 interface PageLoaderProps {
   isLoading: boolean;
@@ -44,7 +44,7 @@ export const PageLoader = ({ isLoading, exiting, onExitComplete }: PageLoaderPro
         className="fixed inset-0 z-[9997] overflow-hidden"
         initial={{ opacity: 0 }}
         animate={{ opacity: exiting ? 0 : 1 }}
-        transition={{ duration: exiting ? 0.3 : 0.4 }}
+        transition={{ duration: exiting ? 0.2 : 0.3 }}
       >
         <img
           src={heroImage}
@@ -65,7 +65,7 @@ export const PageLoader = ({ isLoading, exiting, onExitComplete }: PageLoaderPro
             <motion.h1
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.4 }}
+              transition={{ duration: 0.25 }}
               className="absolute top-8 left-6 sm:top-10 sm:left-10 md:top-12 md:left-12 font-display text-2xl sm:text-3xl md:text-4xl font-medium tracking-[0.2em] text-[#FAF5E8]"
               style={{ textShadow: "0 2px 20px rgba(0,0,0,0.6)" }}
             >
@@ -77,7 +77,7 @@ export const PageLoader = ({ isLoading, exiting, onExitComplete }: PageLoaderPro
               alt="Coming Soon"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.4, delay: 0.1 }}
+              transition={{ duration: 0.25, delay: 0.05 }}
               className="w-full max-w-xl sm:max-w-2xl object-contain"
               style={{
                 filter: "drop-shadow(0 8px 32px rgba(0,0,0,0.6)) drop-shadow(0 0 48px rgba(203,162,75,0.3))",

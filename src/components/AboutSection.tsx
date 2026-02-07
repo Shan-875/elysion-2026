@@ -3,7 +3,7 @@ import coupleDance from "@/assets/couple-dance.png";
 
 export const AboutSection = () => {
   return (
-    <section id="about" className="py-28 bg-theme-about relative overflow-hidden">
+    <section id="about" className="py-28 bg-theme-about relative overflow-hidden scroll-mt-28">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24 bg-gradient-to-b from-transparent via-[#CBA24B]/40 to-transparent z-10" />
 
       <div className="container mx-auto px-6 max-w-6xl relative z-10">
@@ -19,10 +19,10 @@ export const AboutSection = () => {
             About Elysion
           </span>
           <h2 className="font-hero text-4xl md:text-5xl lg:text-6xl text-primary mt-4 mb-6">
-            A Legacy of Excellence
+            Elysion 2026
           </h2>
           <p className="font-hero text-xl text-foreground/80 max-w-2xl mx-auto">
-            A Royal Tech Romance
+            The inaugural intercollegiate technical and cultural event of IEEE SB CE Munnar
           </p>
           <div className="w-24 h-0.5 bg-gradient-gold mx-auto mt-4" />
         </motion.div>
@@ -60,21 +60,19 @@ export const AboutSection = () => {
             className="space-y-6"
           >
             <p className="font-body text-xl text-foreground/85 leading-relaxed">
-              Elysion is an intercollegiate event that was the inauguration of IEEE CS Chapter
-              of CE Munnar in 2016. The second, third and fourth editions of Elysion were
-              two-day technical symposiums held in November 2017, October 2019 and January 2022
-              respectively.
+              Elysion 2026 is the inaugural intercollegiate technical and cultural event organized
+              by the IEEE Student Branch, College of Engineering Munnar. As the first edition of this
+              flagship event, Elysion brings together students from across the state to celebrate
+              innovation, creativity, and collaboration.
             </p>
             <p className="font-body text-xl text-foreground/85 leading-relaxed">
-              The four previous editions saw a great participation from students across the state.
-              Elysion is a combination of technology, culture and humanity, each edition has
-              promised this to all the participants. This event has always been a part of the
-              sweetest memories in the mind of all participants.
+              Blending technology, culture, and meaningful connections, Elysion 2026 features
+              engaging technical workshops, competitions, and networking opportunities. This first
+              edition sets the stage for a new tradition of excellence and memorable experiences
+              for all participants.
             </p>
             <p className="font-body text-xl text-foreground/85 leading-relaxed">
-              <span className="text-gradient-gold font-display font-semibold">ELYSION </span> continues
-              the legacy of excellence while bringing fresh innovations and opportunities for participants.
-              Join us for days filled with technical workshops, competitions, and networking opportunities.
+              Join us and be part of the beginning of something extraordinary.
             </p>
           </motion.div>
         </div>
@@ -87,8 +85,7 @@ export const AboutSection = () => {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-center font-body text-xl text-foreground/75 italic mt-16 max-w-3xl mx-auto"
         >
-          Experience the perfect blend of technology, culture, and humanity that has made
-          Elysion a memorable event for participants throughout its history.
+          Experience the perfect blend of technology, culture, and community at Elysion 2026.
         </motion.p>
       </div>
     </section>

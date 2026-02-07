@@ -20,9 +20,9 @@ const activities = [
   },
   {
     icon: Stars,
-    title: "Sky Lantern Night",
+    title: "Prom Night",
     description:
-      "Light up the night sky with beautiful lanterns, making wishes and creating a magical atmosphere together.",
+      "A magical night of music, dance, and memories. Dress up and celebrate an unforgettable evening.",
     image: programImages.activities.skyLantern,
   },
   {
@@ -36,7 +36,7 @@ const activities = [
 
 export const ActivitiesSection = () => {
   return (
-    <section id="activities" className="py-28 bg-gradient-hero relative overflow-hidden">
+    <section id="activities" className="py-28 bg-gradient-hero relative overflow-hidden scroll-mt-28">
       {/* Subtle radial glow */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[min(100%,800px)] h-[60%] bg-secondary/5 rounded-full blur-3xl" />
@@ -61,7 +61,7 @@ export const ActivitiesSection = () => {
             Event Activities
           </h2>
           <p className="font-body text-primary-foreground/70 text-lg max-w-xl mx-auto">
-            Trekking, campfire, lanterns & cultural night
+            Trekking, campfire, prom night & cultural night
           </p>
           <div className="w-24 h-0.5 bg-gradient-gold mx-auto mt-6" />
         </motion.div>
