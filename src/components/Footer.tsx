@@ -7,13 +7,12 @@ import isb from "@/assets/isb.png";
 import yuva from "@/assets/yuva.png";
 
 const sponsorLogos = [
-  { src: ieee, alt: "IEEE Computer Society" },
   { src: ies, alt: "IEEE Industrial Electronics Society" },
   { src: asces, alt: "ASCES" },
   { src: isb, alt: "IEEE ISB" },
   { src: yuva, alt: "Yuva" },
-  { src: "/mtts-logo.png", alt: "IEEE Microwave Theory & Technology Society (MTT-S)" },
-  { src: "/partner-logo.png", alt: "Collaboration Partner" },
+  { src: "mtts-logo.png.PNG", alt: "IEEE Microwave Theory & Technology Society (MTT-S)" },
+  { src: "IMG_4352.PNG", alt: "Collaboration Partner" },
 ];
 
 export const Footer = () => {

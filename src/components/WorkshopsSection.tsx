@@ -5,7 +5,8 @@ import { programImages } from "@/lib/programImages";
 const workshops = [
   {
     icon: Cpu,
-    image: programImages.gallery[2],
+    image: "embedded-workshop.jpg",
+    imageAlt: "embedded-workshop.jpg.jpeg",
     title: "Embedded Systems Workshop",
     description:
       "Introduction to microcontrollers and real-time systems. Get hands-on with ESP32 to build and control a smart car through your phone.",
@@ -15,7 +16,8 @@ const workshops = [
   },
   {
     icon: Gamepad2,
-    image: programImages.gallery[0],
+    image: "game-dev-workshop.jpg",
+    imageAlt: "game-dev-workshop.jpg.jpeg",
     title: "Game Development Workshop",
     description:
       "Create your own 3D games using Unity. Learn models, objects, and scripting while designing and building interactive environments.",
@@ -83,9 +85,19 @@ export const WorkshopsSection = () => {
                 <div className="flex flex-col items-center gap-4 flex-shrink-0">
                   <div className="w-full lg:w-64 aspect-video rounded-sm overflow-hidden border border-secondary/30 bg-primary/40">
                     <img
-                      src={workshop.image}
+                      src={
+                        workshop.image.startsWith("http")
+                          ? workshop.image
+                          : `${import.meta.env.BASE_URL}${workshop.image}`
+                      }
                       alt={workshop.title}
                       className="w-full h-full object-cover"
+                      onError={(e) => {
+                        const alt = workshop.imageAlt
+                          ? `${import.meta.env.BASE_URL}${workshop.imageAlt}`
+                          : `${import.meta.env.BASE_URL}placeholder.svg`;
+                        e.currentTarget.src = alt;
+                      }}
                     />
                   </div>
                   <div className="w-16 h-16 flex items-center justify-center border border-secondary/40 bg-secondary/10">

@@ -6,8 +6,15 @@ const speakers = [
   {
     name: "NAJIL UMAIR",
     role: "DevOps Engineer, Synnefo Solutions, Cochin",
-    status: "Featured Speaker",
-    photo: "/najil-umair.jpg",
+    session: "Build with Docker",
+    tagline: "Pack your code in a box",
+    photo: "najil-umair.jpg.jpeg",
+  },
+  {
+    name: "ABHINAND BINU",
+    role: "Robotics Engineer, Unibotix Innovations",
+    status: "Career opportunities in robotics",
+    photo: "SpeakersSection.tsx.jpeg",
   },
 ];
 
@@ -27,24 +34,16 @@ export const SpeakersSection = () => {
           className="text-center mb-16"
         >
           <span className="font-body text-lg text-secondary tracking-[0.2em] uppercase">
-            Speakers
+            Talk section
           </span>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-primary mt-4 mb-6">
             Speakers
           </h2>
-          <div className="mt-2">
-            <p className="font-display text-2xl md:text-3xl text-primary text-center">
-              Build with Docker
-            </p>
-            <p className="font-body text-base md:text-lg text-muted-foreground text-center">
-              "Pack your code in a box"
-            </p>
-          </div>
           <div className="w-24 h-0.5 bg-gradient-gold mx-auto" />
         </motion.div>
 
         {/* Speakers Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-4xl mx-auto justify-items-center">
           {speakers.map((speaker, index) => (
             <motion.div
               key={index}
@@ -71,9 +70,21 @@ export const SpeakersSection = () => {
                 <p className="font-body text-lg text-muted-foreground mb-2">
                   {speaker.role}
                 </p>
-                <span className="font-sans text-sm text-secondary tracking-wide">
-                  {speaker.status}
-                </span>
+                {speaker.status && (
+                  <p className="font-display text-base text-primary mt-1">
+                    {speaker.status}
+                  </p>
+                )}
+                {speaker.session && (
+                  <p className="font-display text-base text-primary mt-2">
+                    {speaker.session}
+                  </p>
+                )}
+                {speaker.tagline && (
+                  <p className="font-body text-sm text-muted-foreground">
+                    "{speaker.tagline}"
+                  </p>
+                )}
               </div>
             </motion.div>
           ))}

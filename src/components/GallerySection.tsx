@@ -9,8 +9,18 @@ const galleryImages = [
   { id: 2, alt: "Event glimpse", src: programImages.gallery[1] },
   { id: 3, alt: "Scenic Munnar", src: programImages.gallery[2] },
   { id: 4, alt: "Campfire night", src: programImages.gallery[3] },
-  { id: 5, alt: "Photography workshop", src: programImages.gallery[4] },
-  { id: 6, alt: "AR/VR workshop", src: programImages.gallery[5] },
+  {
+    id: 5,
+    alt: "Embedded systems workshop",
+    src: `${import.meta.env.BASE_URL}embedded-workshop.jpg`,
+    fallback: `${import.meta.env.BASE_URL}embedded-workshop.jpg.jpeg`,
+  },
+  {
+    id: 6,
+    alt: "Game development workshop",
+    src: `${import.meta.env.BASE_URL}game-dev-workshop.jpg`,
+    fallback: `${import.meta.env.BASE_URL}game-dev-workshop.jpg.jpeg`,
+  },
 ];
 
 export const GallerySection = () => {
@@ -56,6 +66,10 @@ export const GallerySection = () => {
                 src={image.src}
                 alt={image.alt}
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                onError={(e) => {
+                  const f = (image as any).fallback || `${import.meta.env.BASE_URL}placeholder.svg`;
+                  e.currentTarget.src = f;
+                }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute inset-0 border-2 border-transparent group-hover:border-[#CBA24B]/60 transition-colors duration-300 rounded-sm pointer-events-none" />
