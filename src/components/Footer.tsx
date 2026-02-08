@@ -12,6 +12,8 @@ const sponsorLogos = [
   { src: asces, alt: "ASCES" },
   { src: isb, alt: "IEEE ISB" },
   { src: yuva, alt: "Yuva" },
+  { src: "/mtts-logo.png", alt: "IEEE Microwave Theory & Technology Society (MTT-S)" },
+  { src: "/partner-logo.png", alt: "Collaboration Partner" },
 ];
 
 export const Footer = () => {
